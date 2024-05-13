@@ -1,51 +1,42 @@
 import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code"
+import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
+import { siteConfig, HomeCopy } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
+import ColorContainer from "@/components/ColorContainer";
 
 export default function Home() {
 	return (
 		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>Make&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
-				<br />
-				<h1 className={title()}>
-					websites regardless of your design experience.
-				</h1>
-				<h2 className={subtitle({ class: "mt-4" })}>
-					Beautiful, fast and modern React UI library.
-				</h2>
+			{/* About */}
+			<div className="flex text-center justify-center">
+				<div className="container">
+					<h1 className={title({ color: "violet" })}>Brittney Cavazos</h1>
+					<br />
+					<p className={subtitle({ class: "mt-4" })}>
+						Front end, mobile development, logo, & print design
+					</p>
+				</div>
+				<ColorContainer
+					className={"container max-w-lg text-center justify-center"}
+					fillings={HomeCopy.description}
+				/>
 			</div>
+			{/* Skillsets */}
+			<ColorContainer className={""} fillings={"Skillsets here"} />
+			{/* Project & History */}
+			<div className="flex">
+				<ColorContainer className={""} fillings={"projects here"} />
+				<div>
+					<p>History here</p>
+				</div>
+			</div>
+			<ColorContainer classNanme={""} fillings={"form here"} />
 
-			<div className="flex gap-3">
-				<Link
-					isExternal
-					href={siteConfig.links.docs}
-					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-				>
-					Documentation
-				</Link>
-				<Link
-					isExternal
-					className={buttonStyles({ variant: "bordered", radius: "full" })}
-					href={siteConfig.links.github}
-				>
-					<GithubIcon size={20} />
-					GitHub
-				</Link>
-			</div>
-
-			<div className="mt-8">
-				<Snippet hideSymbol hideCopyButton variant="flat">
-					<span>
-						Get started by editing <Code color="primary">app/page.tsx</Code>
-					</span>
-				</Snippet>
-			</div>
+			{/* Contact */}
+			<div></div>
 		</section>
 	);
 }

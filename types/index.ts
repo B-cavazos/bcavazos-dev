@@ -1,5 +1,16 @@
-import {SVGProps} from "react";
+import { SVGProps } from "react";
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
-  size?: number;
+	size?: number;
 };
+
+declare global {
+	namespace JSX {
+		interface IntrinsicElements {
+			colorContainer: {
+				fillings: any;
+				classNanme: string;
+			};
+		}
+	}
+}
