@@ -20,20 +20,20 @@ export default function Home() {
 					</p>
 				</div>
 				<ColorContainer
-					className={"container max-w-lg text-center justify-center"}
+					classProp={"max-w-lg text-center justify-center"}
 					fillings={HomeCopy.description}
 				/>
 			</div>
 			{/* Skillsets */}
-			<ColorContainer className={""} fillings={"Skillsets here"} />
+			<ColorContainer classProp={""} fillings={"Skillsets here"} />
 			{/* Project & History */}
 			<div className="flex">
-				<ColorContainer className={""} fillings={"projects here"} />
+				<ColorContainer classProp={""} fillings={"projects here"} />
 				<div>
 					<p>History here</p>
 				</div>
 			</div>
-			<ColorContainer classNanme={""} fillings={"form here"} />
+			<ColorContainer classProp={""} fillings={"form here"} />
 
 			{/* Contact */}
 			<div></div>

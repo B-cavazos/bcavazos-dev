@@ -9,7 +9,7 @@ declare global {
 		interface IntrinsicElements {
 			colorContainer: {
 				fillings: any;
-				classNanme: string;
+				className: string;
 			};
 		}
 	}

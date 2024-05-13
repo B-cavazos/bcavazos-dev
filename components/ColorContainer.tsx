@@ -1,17 +1,23 @@
 import { FC } from "react";
 type ColorContainerProps = {
 	fillings: any;
-	className: string;
+	classProp: string;
 };
 
 const ColorContainer: FC<ColorContainerProps> = ({
 	fillings,
-	className,
+	classProp,
 }: {
 	fillings: any;
-	className: string;
+	classProp: string;
 }) => {
-	console.log("testing container component");
+	// Base class for the component
+	let className = "container";
+	// If classProp is provided, append it to className
+	if (classProp) {
+		className += ` ${classProp}`;
+	}
+
 	return (
 		<div className={className}>
 			<p> {fillings}</p>
