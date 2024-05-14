@@ -18,8 +18,12 @@ module.exports = {
 				lilac: "#B59FBD",
 				lilac2: "#E7C2FF",
 				indigo: "#291F84",
+				blue: "#728BE8",
 				sky: "5B94FF",
 				orange: "#ECA193",
+			},
+			boxShadow: {
+				xl: "35px 35px px -21px rgba(0, 0, 0, 1)",
 			},
 		},
 	},

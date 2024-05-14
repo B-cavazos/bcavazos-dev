@@ -6,22 +6,26 @@ import ColorContainer from "@/components/ColorContainer";
 
 export default function Home() {
 	return (
-		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+		<section className="flex flex-col gap-4 py-8 md:py-10">
 			{/* About */}
 			<div className="flex justify-center">
-				<div className="container text-center kodchasan-bold">
-					<h1 className={title({ color: "violet" })}>
-						Brittney Cavazos
-					</h1>
-					<Star />
-					<br />
-					<p className={subtitle({ class: "mt-4" })}>
-						Front end, mobile development, logo, & print design
-					</p>
+				{/* Name */}
+				<div className="container text-center kodchasan-bold p-6">
+					<div>
+						<h1 className="text-plum text-8xl">
+							Brittney <br /> Cavazos
+						</h1>
+						<br />
+						<p className="text-blue-900">
+							Front end, mobile development, logo, & print design
+						</p>
+					</div>
+					{/* <Star /> */}
 				</div>
+				{/* bio */}
 				<ColorContainer
 					classProp={
-						"max-w-lg justify-center montserrat leading-relaxed"
+						"col-6 justify-center montserrat leading-relaxed text-plum"
 					}
 					fillings={HomeCopy.description}
 				/>
