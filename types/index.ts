@@ -10,6 +10,7 @@ declare global {
 			colorContainer: {
 				fillings: any;
 				className: string;
+				displayTitle?: string;
 			};
 		}
 	}

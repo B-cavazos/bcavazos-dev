@@ -12,7 +12,8 @@ const ColorContainer: FC<ColorContainerProps> = ({
 	classProp: string;
 }) => {
 	// Base class for the component
-	let className = "container";
+	let className =
+		"container rounded-2 backdrop-blur-sm bg-gradient-to-b from-cyan-500 via-purple-500 to-blue-500 shadow-xl rounded-3xl"; //needs opacity, bg fill+opacity
 	// If classProp is provided, append it to className
 	if (classProp) {
 		className += ` ${classProp}`;
@@ -20,7 +21,9 @@ const ColorContainer: FC<ColorContainerProps> = ({
 
 	return (
 		<div className={className}>
-			<p> {fillings}</p>
+			<div className="p-12 shadow-inner rounded-3xl">
+				<p> {fillings}</p>
+			</div>
 		</div>
 	);
 };

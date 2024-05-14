@@ -2,7 +2,7 @@ import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig, HomeCopy } from "@/config/site";
+import { HomeCopy } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import ColorContainer from "@/components/ColorContainer";
@@ -11,8 +11,8 @@ export default function Home() {
 	return (
 		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 			{/* About */}
-			<div className="flex text-center justify-center">
-				<div className="container">
+			<div className="flex justify-center">
+				<div className="container text-center">
 					<h1 className={title({ color: "violet" })}>Brittney Cavazos</h1>
 					<br />
 					<p className={subtitle({ class: "mt-4" })}>
@@ -20,7 +20,7 @@ export default function Home() {
 					</p>
 				</div>
 				<ColorContainer
-					classProp={"max-w-lg text-center justify-center"}
+					classProp={"max-w-lg justify-center montserrat leading-relaxed"}
 					fillings={HomeCopy.description}
 				/>
 			</div>
