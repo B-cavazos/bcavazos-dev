@@ -11,8 +11,8 @@ export default function Home() {
 			{/* About */}
 			<div className="flex flex-col md:flex-row p-12 gap-6">
 				{/* Name */}
-				<div className="container flex flex-row place-content-center text-center kodchasan-bold px-6 p-12 basis-1/2">
-					<div>
+				<div className="container flex flex-row place-content-center text-center  items-center kodchasan-bold px-6 p-12 basis-1/2">
+					<div className="relative">
 						<h1 className="text-plum text-8xl tracking-wider">
 							Brittney <br /> Cavazos
 						</h1>
@@ -20,8 +20,8 @@ export default function Home() {
 						<p className="text-blue-900 leading-tight -mt-3">
 							Front end, mobile development, logo, & print design
 						</p>
+						<Star className="absolute top-0 -right-11" />
 					</div>
-					<Star className="" />
 				</div>
 				{/* bio */}
 				<ColorContainer

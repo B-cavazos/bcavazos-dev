@@ -12,3 +12,5 @@ function AboutBio() {
 }
 
 export default AboutBio;
+
+//add scroll to text when screen size gets too small before breakpoint
