@@ -9,7 +9,7 @@ export default function Home() {
 	return (
 		<section className="flex flex-col gap-4 py-8 md:py-10 justify-center">
 			{/* About */}
-			<div className="flex flex-col md:flex-row p-12 gap-6">
+			<section className="flex flex-col md:flex-row p-12 gap-6">
 				{/* Name */}
 				<div className="container flex flex-row place-content-center text-center  items-center kodchasan-bold px-6 p-12 basis-1/2">
 					<div className="relative">
@@ -30,17 +30,19 @@ export default function Home() {
 					}
 					ComponentProp={AboutBio}
 				/>
-			</div>
+			</section>
 			{/* Skillsets */}
+			<section id="skillset"></section>
 			{/* Project & History */}
-			<div className="flex">
-				<div>
-					<p>History here</p>
+			<section id="proj">
+				<div className="flex">
+					<div>
+						<p>History here</p>
+					</div>
 				</div>
-			</div>
-
+			</section>
 			{/* Contact */}
-			<div></div>
+			<section id="contact"></section>
 		</section>
 	);
 }
