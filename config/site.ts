@@ -70,8 +70,10 @@ export const siteConfig = {
 };
 
 export const HomeCopy = {
-	description:
-		"I am a Web Developer & Graphic Designer who loves to make things. In my work, I prioritize understanding how a product can best communicate with users both visually and functionally. When I am not building things, I like to spend time with my two cats and play a lot of Dance Dance Revolution.",
+	description: [
+		"I am a Web Developer & Graphic Designer who loves to make things. In my work, I prioritize understanding how a product can best communicate with users both visually and functionally.",
+		"When I am not building things, I like to spend time with my two cats and play a lot of Dance Dance Revolution.",
+	],
 	skillset: [
 		{
 			label: "React",

@@ -6,7 +6,14 @@ function AboutBio() {
 			<h3 className="text-4xl text-end text-lilac lowercase kodchasan-bold mt-4 mb-2 mr-4">
 				Who is She?
 			</h3>
-			<p className="mr-12">{HomeCopy.description}</p>
+			<div className="mr-12">
+				<p>
+					{HomeCopy.description[0]}
+					<br />
+					<br />
+					{HomeCopy.description[1]}
+				</p>
+			</div>
 		</div>
 	);
 }
