@@ -3,6 +3,7 @@ import { HomeCopy } from "@/config/site";
 import { Star } from "@/components/icons";
 import { title, subtitle } from "@/components/primitives";
 import ColorContainer from "@/components/ColorContainer";
+import AboutBio from "@/components/AboutBio";
 
 export default function Home() {
 	return (
@@ -27,19 +28,16 @@ export default function Home() {
 					classProp={
 						"col-6 justify-center montserrat leading-relaxed text-plum basis-1/2"
 					}
-					fillings={HomeCopy.description}
+					ComponentProp={AboutBio}
 				/>
 			</div>
 			{/* Skillsets */}
-			<ColorContainer classProp={""} fillings={"Skillsets here"} />
 			{/* Project & History */}
 			<div className="flex">
-				<ColorContainer classProp={""} fillings={"projects here"} />
 				<div>
 					<p>History here</p>
 				</div>
 			</div>
-			<ColorContainer classProp={""} fillings={"form here"} />
 
 			{/* Contact */}
 			<div></div>

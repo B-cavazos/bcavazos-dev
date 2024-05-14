@@ -7,10 +7,9 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
 declare global {
 	namespace JSX {
 		interface IntrinsicElements {
-			colorContainer: {
-				fillings: any;
-				className: string;
-				displayTitle?: string;
+			ColorContainer: {
+				classProp: string;
+				componentProp: React.ComponentType;
 			};
 		}
 	}

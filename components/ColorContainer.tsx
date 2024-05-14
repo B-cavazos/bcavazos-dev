@@ -1,14 +1,14 @@
 import { FC } from "react";
 type ColorContainerProps = {
-	fillings: any;
 	classProp: string;
+	ComponentProp: React.ComponentType;
 };
 
 const ColorContainer: FC<ColorContainerProps> = ({
-	fillings,
 	classProp,
+	ComponentProp,
 }: {
-	fillings: any;
+	ComponentProp: React.ComponentType;
 	classProp: string;
 }) => {
 	// Base class for the component
@@ -21,7 +21,7 @@ const ColorContainer: FC<ColorContainerProps> = ({
 
 	return (
 		<div className={className}>
-			<p> {fillings}</p>
+			<ComponentProp />
 		</div>
 	);
 };
