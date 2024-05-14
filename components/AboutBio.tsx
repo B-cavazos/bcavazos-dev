@@ -2,9 +2,11 @@ import { HomeCopy } from "@/config/site";
 
 function AboutBio() {
 	return (
-		<div>
-			<h3>Who is She?</h3>
-			<p>{HomeCopy.description}</p>
+		<div className="flex flex-col-reverse ml-12 mt-12">
+			<h3 className="text-4xl text-end text-lilac lowercase kodchasan-bold mt-4 mb-2 mr-4">
+				Who is She?
+			</h3>
+			<p className="mr-12">{HomeCopy.description}</p>
 		</div>
 	);
 }
