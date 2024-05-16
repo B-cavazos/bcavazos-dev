@@ -1,6 +1,11 @@
 import CardComponent from "./CardComponent";
 const ProjectsComponent = () => {
-	return <CardComponent />;
+	return;
+	<section>
+		{/* FILTER */}
+		{/* CARDS */}
+		<CardComponent />;
+	</section>;
 };
 
 export default ProjectsComponent;
