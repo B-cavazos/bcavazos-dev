@@ -1,5 +1,6 @@
+import CardComponent from "./CardComponent";
 const ProjectsComponent = () => {
-	return <p>projects here</p>;
+	return <CardComponent />;
 };
 
 export default ProjectsComponent;
