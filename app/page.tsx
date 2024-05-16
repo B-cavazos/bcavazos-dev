@@ -6,6 +6,7 @@ import DividerComponent from "@/components/DividerComponent";
 import ColorContainer from "@/components/ColorContainer";
 import AboutBio from "@/components/AboutBio";
 import { Skillsets } from "@/components/Skillsets";
+import ProjectsComponent from "@/components/ProjectsComponent";
 
 export default function Home() {
 	return (
@@ -43,9 +44,14 @@ export default function Home() {
 				/>
 			</section>
 			{/* Project & History */}
+			<DividerComponent header={"What Can She Do?"} />
 			<section id="proj">
-				<div className="flex">
-					<div>
+				<div className="flex gap-4">
+					<ColorContainer
+						classProp={"w-1/2"}
+						ComponentProp={ProjectsComponent}
+					/>
+					<div className="w-1/2">
 						<p>History here</p>
 					</div>
 				</div>
