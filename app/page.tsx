@@ -5,6 +5,7 @@ import { title, subtitle } from "@/components/primitives";
 import DividerComponent from "@/components/DividerComponent";
 import ColorContainer from "@/components/ColorContainer";
 import AboutBio from "@/components/AboutBio";
+import { Skillsets } from "@/components/Skillsets";
 
 export default function Home() {
 	return (
@@ -33,8 +34,14 @@ export default function Home() {
 				/>
 			</section>
 			{/* Skillsets */}
-			<DividerComponent header={"What Does She Know?"} />
-			<section id="skillset"></section>
+
+			<section id="skillset">
+				<DividerComponent header={"What Does She Know?"} />
+				<ColorContainer
+					classProp={"flex justify-center"}
+					ComponentProp={Skillsets}
+				/>
+			</section>
 			{/* Project & History */}
 			<section id="proj">
 				<div className="flex">

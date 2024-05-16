@@ -1,6 +1,6 @@
 import { FC } from "react";
 type ColorContainerProps = {
-	classProp: string;
+	classProp?: string;
 	ComponentProp: React.ComponentType;
 };
 
@@ -9,7 +9,7 @@ const ColorContainer: FC<ColorContainerProps> = ({
 	ComponentProp,
 }: {
 	ComponentProp: React.ComponentType;
-	classProp: string;
+	classProp?: string;
 }) => {
 	// Base class for the component
 	let className =
