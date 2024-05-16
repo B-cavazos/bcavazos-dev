@@ -1,7 +1,6 @@
 import React from "react";
 import { HomeCopy } from "@/config/site";
 import { Star } from "@/components/icons";
-import { title, subtitle } from "@/components/primitives";
 import DividerComponent from "@/components/DividerComponent";
 import ColorContainer from "@/components/ColorContainer";
 import AboutBio from "@/components/AboutBio";

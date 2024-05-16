@@ -14,3 +14,18 @@ declare global {
 		}
 	}
 }
+export type ColorContainerProps = {
+	classProp?: string;
+	ComponentProp: React.ComponentType;
+};
+
+export interface ProjectItem {
+	title: string;
+	category: string[];
+	image: string;
+	href: string;
+}
+
+export interface ProjectProps {
+	project: ProjectItem;
+}
