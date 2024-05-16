@@ -67,68 +67,6 @@ export const HomeCopy = {
 		"I am a Web Developer & Graphic Designer who loves to make things. In my work, I prioritize understanding how a product can best communicate with users both visually and functionally.",
 		"When I am not building things, I like to spend time with my two cats and play a lot of Dance Dance Revolution.",
 	],
-	skillset: [
-		{
-			label: "React",
-			image: "/",
-		},
-		{
-			label: "HTML",
-			image: "/",
-		},
-		{
-			label: "CSS",
-			image: "/",
-		},
-		{
-			label: "React Native",
-			image: "/",
-		},
-		{
-			label: "React Tool Kit",
-			image: "/",
-		},
-		{
-			label: "DBeaver",
-			image: "/",
-		},
-		{
-			label: "Swagger UI",
-			image: "/",
-		},
-		{
-			label: "Visual Studio Code",
-			image: "/",
-		},
-		{
-			label: "Git",
-			image: "/",
-		},
-		{
-			label: "Github",
-			image: "/",
-		},
-		{
-			label: "Figma",
-			image: "/",
-		},
-		{
-			label: "Sketch",
-			image: "/",
-		},
-		{
-			label: "Adobe Illustrator",
-			image: "/",
-		},
-		{
-			label: "Adobe Photoshop",
-			image: "/",
-		},
-		{
-			label: "Adobe InDesign",
-			image: "/",
-		},
-	],
 	projectItems: [
 		{
 			title: "name",
