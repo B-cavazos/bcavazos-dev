@@ -39,9 +39,13 @@ const ProjectsComponent: FC = () => {
 				</Button>
 			</p>
 			<div className="grid grid-cols-2 gap-x-6 gap-y-6">
-				{projects.map((project, index) => (
-					<CardComponent project={project} />
-				))}
+				{projects.map((project, index) => {
+					if (
+						project.category.some((cat) => category.includes(cat))
+					) {
+						return <CardComponent project={project} />;
+					}
+				})}
 			</div>
 		</div>
 	);
