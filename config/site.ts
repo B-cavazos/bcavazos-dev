@@ -1,3 +1,5 @@
+import { HistoryItem } from "@/types";
+
 export type SiteConfig = typeof siteConfig;
 export type HomeCopy = typeof HomeCopy;
 
@@ -89,12 +91,40 @@ export const HomeCopy = {
 	],
 	History: [
 		{
-			type: "",
-			name: "",
-			start: "",
-			end: "",
-			title: "",
-			points: ["", "", ""],
+			type: "Work",
+			name: "Bitwise Industries",
+			start: "2021",
+			end: "2023",
+			title: "Software Engineer",
+			points: [
+				"Point 1 where I did this thing",
+				"I did this other thing that was pretty cool, let me tell you I hope this impresses you",
+				"please hire me. give me an interview, I need this. I need this. I need this. I need this. I need this. I need this. I need this. I need this. I need this. I need this.",
+			],
 		},
-	],
+		{
+			type: "Education",
+			institution: "Bitwise Industries",
+			start: "2021",
+			end: "2023",
+			title: "Software Engineer",
+			points: [
+				"Point 1 where I did this thing",
+				"I did this other thing that was pretty cool, let me tell you I hope this impresses you",
+				"please hire me. give me an interview, I need this. I need this. I need this. I need this. I need this. I need this. I need this. I need this. I need this. I need this.",
+			],
+		},
+		{
+			type: "Apprenticeship",
+			institution: "Bitwise Industries",
+			start: "2021",
+			end: "2023",
+			title: "Software Engineer",
+			points: [
+				"Point 1 where I did this thing",
+				"I did this other thing that was pretty cool, let me tell you I hope this impresses you",
+				"please hire me. give me an interview, I need this. I need this. I need this. I need this. I need this. I need this. I need this. I need this. I need this. I need this.",
+			],
+		},
+	] as HistoryItem[],
 };

@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
-import { HomeCopy } from "@/config/site";
-import { ProjectItem, ProjectProps } from "@/types";
+import { ProjectProps } from "@/types";
 
 const CardComponent: FC<ProjectProps> = ({ project }) => {
 	return (

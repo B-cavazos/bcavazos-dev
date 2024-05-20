@@ -29,3 +29,12 @@ export interface ProjectItem {
 export interface ProjectProps {
 	project: ProjectItem;
 }
+
+export interface HistoryItem {
+	type: string;
+	name: string;
+	start: string;
+	end: string;
+	title: string;
+	points: string[];
+}

@@ -1,11 +1,11 @@
 import React from "react";
-import { HomeCopy } from "@/config/site";
 import { Star } from "@/components/icons";
 import DividerComponent from "@/components/DividerComponent";
 import ColorContainer from "@/components/ColorContainer";
 import AboutBio from "@/components/AboutBio";
 import { Skillsets } from "@/components/Skillsets";
 import ProjectsComponent from "@/components/ProjectsComponent";
+import HistoryComponent from "@/components/HistoryComponent";
 
 export default function Home() {
 	return (
@@ -34,7 +34,6 @@ export default function Home() {
 				/>
 			</section>
 			{/* Skillsets */}
-
 			<section id="skillset">
 				<DividerComponent header={"What Does She Know?"} />
 				<ColorContainer
@@ -44,17 +43,14 @@ export default function Home() {
 			</section>
 			{/* Project & History */}
 			<DividerComponent header={"What Can She Do?"} />
-			<section id="proj">
-				<div className="flex flex-col md:flex-row gap-4">
-					<ColorContainer
-						classProp={"w-100 md:w-1/2"}
-						ComponentProp={ProjectsComponent}
-					/>
-					<div className="w-100 md:w-1/2">
-						<p>History here</p>
-					</div>
-				</div>
+			<section id="proj" className="flex flex-col md:flex-row gap-4">
+				<ColorContainer
+					classProp={"w-100 md:w-1/2"}
+					ComponentProp={ProjectsComponent}
+				/>
+				<HistoryComponent />
 			</section>
+
 			{/* Contact */}
 			<section id="contact"></section>
 		</section>
