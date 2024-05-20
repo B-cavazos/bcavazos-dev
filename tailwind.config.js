@@ -21,6 +21,9 @@ module.exports = {
 				sky: "#5B94FF",
 				orange: "#ECA193",
 			},
+			boxShadow: {
+				'custom-blue': '0px 4px 10px rgba(0, 0, 255, 0.4)',
+			  },
 /* 			boxShadow: {
 				xl: "35px 35px px -21px rgba(0, 0, 0, 1)",
 			}, */
