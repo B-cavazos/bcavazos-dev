@@ -19,13 +19,11 @@ const CardComponent: FC<ProjectProps> = ({ project }) => {
 				<h4 className="font-bold text-large tracking-wide text-plum">
 					{project.title}
 				</h4>
-				{project.category.map((category, index) => {
-					return (
-						<p className="text-tiny text-sky" key={index}>
-							{category}
-						</p>
-					);
-				})}
+				<p className="text-tiny text-sky">
+					{project.category.map((category, index) => {
+						return <>{category}&nbsp;&nbsp;&nbsp;</>;
+					})}
+				</p>
 			</CardHeader>
 		</Card>
 	);
