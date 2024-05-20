@@ -70,13 +70,19 @@ export const HomeCopy = {
 	projectItems: [
 		{
 			title: "Bank of Dad",
-			category: ["design"],
+			category: ["Development"],
 			image: "../images/bankofdad_large.png",
 			href: "",
 		},
 		{
 			title: "Bank of Dad",
-			category: ["design"],
+			category: ["Design"],
+			image: "../images/bankofdad_large.png",
+			href: "",
+		},
+		{
+			title: "Bank of Dad",
+			category: ["Design", "Development"],
 			image: "../images/bankofdad_large.png",
 			href: "",
 		},

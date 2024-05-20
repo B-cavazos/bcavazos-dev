@@ -6,7 +6,7 @@ import { ProjectItem, ProjectProps } from "@/types";
 const CardComponent: FC<ProjectProps> = ({ project }) => {
 	return (
 		//filter should be moved in here eventually
-		<Card className="my-4 montserrat text-left" isPressable>
+		<Card className="montserrat text-left" isPressable>
 			<CardBody className="overflow-visible p-0">
 				<Image
 					alt="Card background"

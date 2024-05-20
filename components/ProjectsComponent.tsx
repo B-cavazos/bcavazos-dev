@@ -6,7 +6,7 @@ const ProjectsComponent: FC = () => {
 	return (
 		<div className="p-6">
 			<p>Development Design All</p>
-			<div className="grid grid-cols-2 gap-12">
+			<div className="grid grid-cols-2 gap-x-6 gap-y-6">
 				{projects.map((project, index) => (
 					<CardComponent project={project} />
 				))}
