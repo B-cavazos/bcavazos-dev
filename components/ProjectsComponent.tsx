@@ -7,6 +7,7 @@ const ProjectsComponent: FC = () => {
 	const projects = HomeCopy.projectItems;
 	const [category, setCategory] = useState(["Design", "Development"]);
 	useState();
+	const [active, setActive] = useState(false);
 	return (
 		<div className="p-6 tracking-wider">
 			<p className="lowercase text-lilac montserrat-bold py-6 tracking-wider">
@@ -14,6 +15,7 @@ const ProjectsComponent: FC = () => {
 					variant="light"
 					size="sm"
 					className="lowercase text-lilac montserrat-bold"
+					onClick={() => setCategory(["Design"])}
 				>
 					Design
 				</Button>
@@ -22,6 +24,7 @@ const ProjectsComponent: FC = () => {
 					variant="light"
 					size="sm"
 					className="lowercase text-lilac montserrat-bold"
+					onClick={() => setCategory(["Development"])}
 				>
 					Development
 				</Button>
@@ -30,6 +33,7 @@ const ProjectsComponent: FC = () => {
 					variant="light"
 					size="sm"
 					className="lowercase text-lilac montserrat-bold"
+					onClick={() => setCategory(["Design", "Development"])}
 				>
 					All
 				</Button>
