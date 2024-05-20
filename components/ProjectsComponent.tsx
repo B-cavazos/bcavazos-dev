@@ -1,5 +1,5 @@
 "use client";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import CardComponent from "./CardComponent";
 import { HomeCopy } from "@/config/site";
 import { Button } from "@nextui-org/button";
@@ -7,14 +7,34 @@ const ProjectsComponent: FC = () => {
 	const projects = HomeCopy.projectItems;
 	const [category, setCategory] = useState(["Design", "Development"]);
 	useState();
-	const [active, setActive] = useState(false);
+	const [designActive, setDesignActive] = useState(false);
+	const [developmentActive, setDevelopmentActive] = useState(false);
+	const [allActive, setAllActive] = useState(true);
+	useEffect(() => {
+		if (category.length == 1 && category.includes("Design")) {
+			setDesignActive(true);
+			setDevelopmentActive(false);
+			setAllActive(false);
+		} else if (category.length == 1 && category.includes("Development")) {
+			setDevelopmentActive(true);
+			setDesignActive(false);
+			setAllActive(false);
+		} else {
+			setDesignActive(false);
+			setDevelopmentActive(false);
+			setAllActive(true);
+		}
+	}, [setDesignActive, setDevelopmentActive, setAllActive, category]);
+
 	return (
 		<div className="p-6 tracking-wider">
 			<p className="lowercase text-lilac montserrat-bold py-6 tracking-wider">
 				<Button
 					variant="light"
 					size="sm"
-					className="lowercase text-lilac montserrat-bold"
+					className={`lowercase montserrat-bold ${
+						designActive ? "text-sky" : "text-lilac"
+					}`}
 					onClick={() => setCategory(["Design"])}
 				>
 					Design
@@ -23,8 +43,10 @@ const ProjectsComponent: FC = () => {
 				<Button
 					variant="light"
 					size="sm"
-					className="lowercase text-lilac montserrat-bold"
 					onClick={() => setCategory(["Development"])}
+					className={`lowercase montserrat-bold ${
+						developmentActive ? "text-sky" : "text-lilac"
+					}`}
 				>
 					Development
 				</Button>
@@ -32,7 +54,9 @@ const ProjectsComponent: FC = () => {
 				<Button
 					variant="light"
 					size="sm"
-					className="lowercase text-lilac montserrat-bold"
+					className={`lowercase montserrat-bold ${
+						allActive ? "text-sky" : "text-lilac"
+					}`}
 					onClick={() => setCategory(["Design", "Development"])}
 				>
 					All
