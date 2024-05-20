@@ -45,12 +45,12 @@ export default function Home() {
 			{/* Project & History */}
 			<DividerComponent header={"What Can She Do?"} />
 			<section id="proj">
-				<div className="flex gap-4">
+				<div className="flex flex-col md:flex-row gap-4">
 					<ColorContainer
-						classProp={"w-1/2"}
+						classProp={"w-100 md:w-1/2"}
 						ComponentProp={ProjectsComponent}
 					/>
-					<div className="w-1/2">
+					<div className="w-100 md:w-1/2">
 						<p>History here</p>
 					</div>
 				</div>
