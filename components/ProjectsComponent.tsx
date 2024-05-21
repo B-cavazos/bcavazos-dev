@@ -28,7 +28,7 @@ const ProjectsComponent: FC = () => {
 
 	return (
 		<div className="p-6 tracking-wider">
-			<p className="lowercase text-lilac montserrat-bold py-6 tracking-wider">
+			<p className="lowercase text-lilac montserrat-bold pb-6 tracking-wider">
 				<Button
 					variant="light"
 					size="sm"

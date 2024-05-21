@@ -8,13 +8,51 @@ import { PiLineVerticalBold } from "react-icons/pi";
 const HistoryComponent: React.FC = () => {
 	const info: HistoryItem[] = HomeCopy.History;
 	const itemClasses = {
-		base: "bg-gradient-to-b from-lilac/80 from-10% to-sand to-90% shadow-sm shadow-custom-blue",
-		trigger: "px-2 py-0 rounded-lg h-14 flex items-center",
+		trigger: "px-2 py-0 rounded-lg h-14 flex",
 		indicator: "text-large",
 		content: "px-2",
 	};
 	return (
-		<Accordion variant="splitted" className="" itemClasses={itemClasses}>
+		<Accordion
+			variant="splitted"
+			itemClasses={itemClasses}
+			motionProps={{
+				variants: {
+					enter: {
+						y: 0,
+						opacity: 1,
+						height: "auto",
+						transition: {
+							height: {
+								type: "spring",
+								stiffness: 500,
+								damping: 30,
+								duration: 1,
+							},
+							opacity: {
+								easings: "ease",
+								duration: 1,
+							},
+						},
+					},
+					exit: {
+						y: -10,
+						opacity: 0,
+						height: 0,
+						transition: {
+							height: {
+								easings: "ease",
+								duration: 0.25,
+							},
+							opacity: {
+								easings: "ease",
+								duration: 0.3,
+							},
+						},
+					},
+				},
+			}}
+		>
 			{info.map((item, index) => (
 				<AccordionItem
 					key={index}
@@ -48,7 +86,7 @@ const HistoryComponent: React.FC = () => {
 						)
 					}
 					classNames={{
-						base: "bg-gradient-to-b from-lilac/80 from-10% to-sand to-90% shadow-sm shadow-custom-blue",
+						base: "bg-gradient-to-b from-lilac/80 from-10% to-sand to-90% shadow-sm shadow-custom-blue mb-1",
 					}} //shadow won't override
 				>
 					<div className="-mt-3 montserrat text-plum">

@@ -1,0 +1,9 @@
+{
+    "forms": {
+      "signupForm": {
+        "name": "ContactForm",
+        "actions": [{ "type": "email", "to": "brittney.cavazos@gmail.com" }],
+        "fields": {"email": {"required": "true", "type": "email"}}
+      }
+    }
+  }
