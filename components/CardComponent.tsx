@@ -8,13 +8,15 @@ const CardComponent: FC<ProjectProps> = ({ project }) => {
 		<Card className="montserrat text-left" isPressable>
 			<CardBody className="overflow-visible p-0">
 				<Image
-					alt="Card background"
+					alt={`${project.title} Image`}
 					className="object-cover rounded-t-xl rounded-b-none "
 					src={project.image}
-					width={270}
+					width={350}
+					isZoomed
 				/>
+				{/* confirm image sizing */}
 			</CardBody>
-			<CardHeader className=" pt-1 px-4 flex-col items-start">
+			<CardHeader className="pt-1 px-4 flex-col items-start">
 				<h4 className="font-bold text-large tracking-wide text-plum">
 					{project.title}
 				</h4>

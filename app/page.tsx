@@ -14,7 +14,7 @@ export default function Home() {
 			{/* About */}
 			<section className="flex flex-col md:flex-row p-12 gap-6">
 				{/* Name */}
-				<div className="container flex flex-row place-content-center text-center  items-center kodchasan-bold px-6 p-12 basis-1/2">
+				<div className="container flex flex-row place-content-center text-center  items-center kodchasan-bold px-6 pb-12 md:p-12 basis-1/2">
 					<div className="relative">
 						<h1 className="text-plum text-8xl tracking-wider">
 							Brittney <br /> Cavazos

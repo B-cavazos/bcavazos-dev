@@ -62,7 +62,7 @@ const ProjectsComponent: FC = () => {
 					All
 				</Button>
 			</p>
-			<div className="grid grid-cols-2 gap-x-6 gap-y-6">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
 				{projects.map((project, index) => {
 					if (
 						project.category.some((cat) => category.includes(cat))
