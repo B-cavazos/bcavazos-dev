@@ -5,7 +5,6 @@ import { HomeCopy } from "@/config/site";
 import { HistoryItem } from "@/types";
 import { FaPlus } from "react-icons/fa";
 import { PiLineVerticalBold } from "react-icons/pi";
-import { Star } from "./star";
 const HistoryComponent: React.FC = () => {
 	const info: HistoryItem[] = HomeCopy.History;
 	const itemClasses = {
@@ -15,11 +14,7 @@ const HistoryComponent: React.FC = () => {
 		content: "text-small px-2",
 	};
 	return (
-		<Accordion
-			variant="splitted"
-			className="w-100"
-			itemClasses={itemClasses}
-		>
+		<Accordion variant="splitted" className="" itemClasses={itemClasses}>
 			{info.map((item, index) => (
 				<AccordionItem
 					key={index}

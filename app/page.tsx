@@ -43,15 +43,18 @@ export default function Home() {
 			</section>
 			{/* Project & History */}
 			<DividerComponent header={"What Can She Do?"} />
-			<section
-				id="proj"
-				className="flex flex-col lg:flex-row gap-4 items-center"
-			>
+			<section id="proj" className="flex flex-col lg:flex-row lg:gap-4">
 				<ColorContainer
-					classProp={"w-100 lg:w-1/2"}
+					classProp={"w-100 lg:w-1/3"}
 					ComponentProp={ProjectsComponent}
 				/>
-				<HistoryComponent />
+				<div className="flex flex-col-reverse lg:ml-12 w-100 md:w-2/3">
+					<h3 className="text-8xl text-wrap text-end text-lilac uppercase tracking-tight kodchasan-bold mt-4 mb-2 mr-4">
+						Projects
+						<br />& History
+					</h3>
+					<HistoryComponent />
+				</div>
 			</section>
 
 			{/* Contact */}
