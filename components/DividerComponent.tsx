@@ -1,6 +1,6 @@
 const DividerComponent = ({ header }: { header: string }) => {
 	return (
-		<div className="flex flex-row items-baseline kodchasan-bold text-plum text-3xl">
+		<div className="flex flex-row items-baseline kodchasan-bold text-plum text-3xl mb-4">
 			<div className="md:mr-12 mr-6">
 				<h3>{header}</h3>
 			</div>
