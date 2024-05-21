@@ -5,6 +5,7 @@ import { HomeCopy } from "@/config/site";
 import { HistoryItem } from "@/types";
 import { FaPlus } from "react-icons/fa";
 import { PiLineVerticalBold } from "react-icons/pi";
+import { Star } from "./star";
 const HistoryComponent: React.FC = () => {
 	const info: HistoryItem[] = HomeCopy.History;
 	const itemClasses = {
@@ -24,7 +25,7 @@ const HistoryComponent: React.FC = () => {
 					key={index}
 					aria-label={`History Item ${index + 1}`}
 					title={
-						<div className="flex items-center justify-between mr-6 montserrat text-plum text-medium">
+						<div className="flex items-center justify-between mr-6 text-18 montserrat text-plum">
 							<div className="mr-2">
 								{/* Customize startContent here */}
 								<span className="font-light">
@@ -56,14 +57,15 @@ const HistoryComponent: React.FC = () => {
 						base: "bg-gradient-to-b from-lilac/80 from-10% to-sand to-90% shadow-sm shadow-custom-blue",
 					}} //shadow won't override
 				>
-					<div>
-						<p>{item.name}</p>
-						<p>
-							{item.start} - {item.end}
+					<div className="-mt-3 montserrat text-plum">
+						<p className="text-16 font-light text-medium italic">
+							{item.title}
 						</p>
-						<ul>
+						<ul className="text-16 font-medium leading-4 -mt-2 pr-12 list-image[url(../public/Star.png)]">
 							{item.points.map((point, idx) => (
-								<li key={idx}>{point}</li>
+								<li className="my-4 " key={idx}>
+									{point}
+								</li>
 							))}
 						</ul>
 					</div>

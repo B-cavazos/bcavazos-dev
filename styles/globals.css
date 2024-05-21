@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+#proj li {
+  background-image: url('../public/Star.png');  /* Base64 encoded SVG data */
+  background-repeat: no-repeat;
+  background-size: 10px; /* Adjust size as needed */
+  padding-left: 33px; /* Adjust left padding to accommodate SVG */
+}
+
 .montserrat-light {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
