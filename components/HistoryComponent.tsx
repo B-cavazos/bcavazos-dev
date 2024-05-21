@@ -11,7 +11,7 @@ const HistoryComponent: React.FC = () => {
 		base: "bg-gradient-to-b from-lilac/80 from-10% to-sand to-90% shadow-sm shadow-custom-blue",
 		trigger: "px-2 py-0 rounded-lg h-14 flex items-center",
 		indicator: "text-large",
-		content: "text-small px-2",
+		content: "px-2",
 	};
 	return (
 		<Accordion variant="splitted" className="" itemClasses={itemClasses}>
@@ -20,16 +20,15 @@ const HistoryComponent: React.FC = () => {
 					key={index}
 					aria-label={`History Item ${index + 1}`}
 					title={
-						<div className="flex items-center justify-between mr-6 text-18 montserrat text-plum">
+						<div className="flex items-center justify-between  montserrat text-plum md:mr-6 text-sm md:text-medium">
 							<div className="mr-2">
-								{/* Customize startContent here */}
 								<span className="font-light">
 									{item.title} @
 								</span>
 								<span className="font-bold"> {item.name}</span>
 							</div>
 							<div>
-								<div className="font-bold italic">
+								<div className="font-bold italic invisible md:visible">
 									{item.start} - {item.end}
 								</div>
 							</div>
@@ -53,12 +52,18 @@ const HistoryComponent: React.FC = () => {
 					}} //shadow won't override
 				>
 					<div className="-mt-3 montserrat text-plum">
-						<p className="text-16 font-light text-medium italic">
-							{item.title}
-						</p>
-						<ul className="text-16 font-medium leading-4 -mt-2 pr-12 list-image[url(../public/Star.png)]">
+						<div className="flex flex-row justify-between">
+							<p className="text-16 font-light text-small md:text-medium italic">
+								{item.title}
+							</p>
+							<div className="font-light italic text-small md:invisible">
+								{item.start} - {item.end}
+							</div>
+						</div>
+
+						<ul className="text-16 font-medium leading-4 md:-mt-2 pr-6 md:pr-12 list-image[url(../public/Star.png)]">
 							{item.points.map((point, idx) => (
-								<li className="my-4 " key={idx}>
+								<li className="my-6 md:my-4 " key={idx}>
 									{point}
 								</li>
 							))}
