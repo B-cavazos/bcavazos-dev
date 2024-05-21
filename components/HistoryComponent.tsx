@@ -17,7 +17,7 @@ const HistoryComponent: React.FC = () => {
 	return (
 		<Accordion
 			variant="splitted"
-			className="w-100 md:w-1/2"
+			className="w-100"
 			itemClasses={itemClasses}
 		>
 			{info.map((item, index) => (
