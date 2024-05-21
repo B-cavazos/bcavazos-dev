@@ -61,7 +61,7 @@ export default function Home() {
 			</section>
 
 			{/* Contact */}
-			<section id="contact" className="w-50">
+			<section id="contact" className="w-100">
 				<ColorContainer
 					ComponentProp={ContactForm}
 					classProp="rounded-md"
