@@ -34,7 +34,11 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<head>
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+				<link
+					rel="preconnect"
+					href="https://fonts.gstatic.com"
+					crossorigin
+				/>
 				<link
 					href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
 					rel="stylesheet"
@@ -42,24 +46,28 @@ export default function RootLayout({
 			</head>
 			<body
 				className={clsx(
-					"min-h-screen bg-background font-sans antialiased",
+					"min-h-screen font-sans antialiased bg-sand",
 					fontSans.variable
 				)}
 			>
-				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className="relative flex flex-col h-screen">
+				<Providers
+					themeProps={{ attribute: "class", defaultTheme: "dark" }}
+				>
+					<div className="relative flex flex-col">
 						<Navbar />
-						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow ">
 							{children}
 						</main>
-						<footer className="w-full flex items-center justify-center py-3">
+						<footer className="w-full flex items-center justify-center py-3 bg-sand">
 							<Link
 								isExternal
 								className="flex items-center gap-1 text-current"
 								href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
 								title="nextui.org homepage"
 							>
-								<span className="text-default-600">Powered by</span>
+								<span className="text-default-600">
+									Powered by
+								</span>
 								<p className="text-primary">NextUI</p>
 							</Link>
 						</footer>
