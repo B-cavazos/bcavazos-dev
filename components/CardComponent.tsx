@@ -1,21 +1,30 @@
-import React from "react";
+import React, { FC } from "react";
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
-import { HomeCopy } from "@/config/site";
+import { ProjectProps } from "@/types";
 
-const CardComponent = () => {
+const CardComponent: FC<ProjectProps> = ({ project }) => {
 	return (
-		<Card className="py-4 w-1/2">
-			<CardBody className="overflow-visible py-2">
+		//filter should be moved in here eventually
+		<Card className="montserrat text-left" isPressable>
+			<CardBody className="overflow-visible p-0">
 				<Image
-					alt="Card background"
-					className="object-cover rounded-xl"
-					src="https://nextui.org/images/hero-card-complete.jpeg"
-					width={270}
+					alt={`${project.title} Image`}
+					className="object-cover rounded-t-xl rounded-b-none "
+					src={project.image}
+					width={350}
+					isZoomed
 				/>
+				{/* confirm image sizing */}
 			</CardBody>
-			<CardHeader className="pb-0 pt-1 px-4 flex-col items-start">
-				<h4 className="font-bold text-large">Frontend Radio</h4>
-				<p className="text-tiny uppercase font-bold">Daily Mix</p>
+			<CardHeader className="pt-1 px-4 flex-col items-start">
+				<h4 className="font-bold text-large tracking-wide text-plum">
+					{project.title}
+				</h4>
+				<p className="text-tiny text-sky">
+					{project.category.map((category, index) => {
+						return <>{category}&nbsp;&nbsp;&nbsp;</>;
+					})}
+				</p>
 			</CardHeader>
 		</Card>
 	);
