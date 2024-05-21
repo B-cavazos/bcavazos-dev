@@ -11,10 +11,7 @@ function ContactForm() {
 		return <p>Thanks reaching out!</p>;
 	}
 	return (
-		<form
-			onSubmit={handleSubmit}
-			className="flex flex-col gap-4 p-6 md:w-50"
-		>
+		<form onSubmit={handleSubmit} className="flex flex-col gap-4 p-6 ">
 			<label htmlFor="email">Email Address</label>
 			<input id="email" type="email" name="email" />
 			<ValidationError
