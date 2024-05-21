@@ -6,6 +6,7 @@ import AboutBio from "@/components/AboutBio";
 import { Skillsets } from "@/components/Skillsets";
 import ProjectsComponent from "@/components/ProjectsComponent";
 import HistoryComponent from "@/components/HistoryComponent";
+import ContactForm from "@/components/FormComponent";
 
 export default function Home() {
 	return (
@@ -58,7 +59,12 @@ export default function Home() {
 			</section>
 
 			{/* Contact */}
-			<section id="contact"></section>
+			<section id="contact">
+				<ColorContainer
+					ComponentProp={ContactForm}
+					classProp="rounded-md"
+				/>
+			</section>
 		</section>
 	);
 }
