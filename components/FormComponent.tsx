@@ -11,26 +11,23 @@ function ContactForm() {
 		return <p>Thanks reaching out!</p>;
 	}
 	return (
-		<form
-			onSubmit={handleSubmit}
-			className="flex flex-col gap-4 p-6 text-plum"
-		>
-			<label htmlFor="email">
+		<form onSubmit={handleSubmit} className="flex flex-col gap-4 p-6">
+			<label htmlFor="email" className="text-plum montserrat-bold">
 				Email Address
 				<br />
 			</label>
-			<input id="email" type="email" name="email" />
+			<input id="email" type="email" name="email" className="h-10 pl-2" />
 			<ValidationError
 				prefix="Email"
 				field="email"
 				errors={state.errors}
 			/>
 
-			<label htmlFor="message">
+			<label htmlFor="message" className="text-plum montserrat-bold">
 				Message
 				<br />
 			</label>
-			<textarea id="message" name="message" />
+			<textarea id="message" name="message" className="h-40 p-2" />
 
 			<ValidationError
 				prefix="Message"
