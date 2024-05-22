@@ -1,6 +1,10 @@
 const Resume = () => {
 	const pdfURL = "/Cavazos_resume_24.pdf";
-	return <iframe src={pdfURL} width={"100vw"} height={"100vw"} />;
+	return (
+		<div className=" flex flex-grow justify-center align-top h-screen">
+			<iframe src={pdfURL} className="flex flex-grow h-screen" />
+		</div>
+	);
 };
 
 export default Resume;
