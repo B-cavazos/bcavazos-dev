@@ -39,7 +39,7 @@ export const siteConfig = {
 		},
 		{
 			label: "Contact",
-			href: "#contact",
+			href: "../public/Resume.tsx",
 		},
 		{
 			label: "Resume",
@@ -49,6 +49,7 @@ export const siteConfig = {
 	links: {
 		github: "https://github.com/b-cavazos",
 		sponsor: "https://patreon.com/jrgarciadev",
+		resume: "/resume",
 	},
 };
 

@@ -68,7 +68,7 @@ export const Navbar = () => {
 						isExternal
 						as={Link}
 						className="text-sm montserrat-bold text-sand bg-lilac tracking-wide" //work on fade
-						href={siteConfig.links.sponsor} //add resume
+						href={siteConfig.links.resume} //add resume
 						variant="flat"
 					>
 						Resume
