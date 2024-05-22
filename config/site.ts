@@ -9,7 +9,7 @@ export const siteConfig = {
 	navItems: [
 		{
 			label: "About",
-			href: "/",
+			href: "#about",
 		},
 		{
 			label: "Skillset",
@@ -26,36 +26,24 @@ export const siteConfig = {
 	],
 	navMenuItems: [
 		{
-			label: "Profile",
-			href: "/profile",
+			label: "About",
+			href: "#about",
 		},
 		{
-			label: "Dashboard",
-			href: "/dashboard",
+			label: "Skillset",
+			href: "#skillset",
 		},
 		{
-			label: "Projects",
-			href: "/projects",
+			label: "Projects & History",
+			href: "#proj",
 		},
 		{
-			label: "Team",
-			href: "/team",
+			label: "Contact",
+			href: "#contact",
 		},
 		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
+			label: "Resume",
+			href: "#contact",
 		},
 	],
 	links: {
