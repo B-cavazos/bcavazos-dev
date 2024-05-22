@@ -43,13 +43,12 @@ export const siteConfig = {
 		},
 		{
 			label: "Resume",
-			href: "/resume",
+			href: "/Cavazos_resume_24.pdf",
 		},
 	],
 	links: {
 		github: "https://github.com/b-cavazos",
-		sponsor: "https://patreon.com/jrgarciadev",
-		resume: "/resume",
+		resume: "/Cavazos_resume_24.pdf",
 	},
 };
 

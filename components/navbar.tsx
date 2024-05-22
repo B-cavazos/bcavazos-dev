@@ -24,6 +24,7 @@ export const Navbar = () => {
 			className=" bg-sand/50 backdrop-blur-xl"
 		>
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
+				{/* brand */}
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
 					<NextLink
 						className="flex justify-start items-center gap-1"
@@ -33,6 +34,7 @@ export const Navbar = () => {
 						<Star width={20} height={20} />
 					</NextLink>
 				</NavbarBrand>
+				{/* left links */}
 				<ul className="hidden md:flex gap-6 justify-start ml-2 montserrat-bold text-plum">
 					{siteConfig.navItems.map((item) => (
 						<NavbarItem key={item.href}>
@@ -48,11 +50,12 @@ export const Navbar = () => {
 					))}
 				</ul>
 			</NavbarContent>
-
+			{/* left buttons */}
 			<NavbarContent
 				className="hidden sm:flex basis-1/5 sm:basis-full"
 				justify="end"
 			>
+				{/* Github */}
 				<NavbarItem className="hidden sm:flex gap-2">
 					<Link
 						isExternal
@@ -63,6 +66,7 @@ export const Navbar = () => {
 					</Link>
 					{/* <ThemeSwitch /> */}
 				</NavbarItem>
+				{/* Resume */}
 				<NavbarItem className="hidden md:flex">
 					<Button
 						isExternal
@@ -75,7 +79,7 @@ export const Navbar = () => {
 					</Button>
 				</NavbarItem>
 			</NavbarContent>
-			{/* toggle */}
+			{/* mobile github and toggle */}
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
 				<Link
 					isExternal
@@ -87,23 +91,12 @@ export const Navbar = () => {
 				{/* <ThemeSwitch /> */}
 				<NavbarMenuToggle />
 			</NavbarContent>
-
+			{/* mobile links */}
 			<NavbarMenu className=" bg-sand/50 backdrop-blur-xl">
 				<div className="mx-4 mt-2 flex flex-col gap-2 montserrat">
 					{siteConfig.navMenuItems.map((item, index) => (
 						<NavbarMenuItem key={`${item}-${index}`}>
-							<Link
-								color={
-									index === 2
-										? "foreground"
-										: index ===
-										  siteConfig.navMenuItems.length - 1
-										? "primary"
-										: "foreground"
-								}
-								href="#"
-								size="lg"
-							>
+							<Link href={item.href} size="lg" color="foreground">
 								{item.label}
 							</Link>
 						</NavbarMenuItem>
