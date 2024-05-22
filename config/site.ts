@@ -9,41 +9,41 @@ export const siteConfig = {
 	navItems: [
 		{
 			label: "About",
-			href: "#about",
+			href: "/",
 		},
 		{
 			label: "Skillset",
-			href: "#skillset",
+			href: "/#skillset",
 		},
 		{
 			label: "Projects & History",
-			href: "#proj",
+			href: "/#proj",
 		},
 		{
 			label: "Contact",
-			href: "#contact",
+			href: "/#contact",
 		},
 	],
 	navMenuItems: [
 		{
 			label: "About",
-			href: "#about",
+			href: "/#about",
 		},
 		{
 			label: "Skillset",
-			href: "#skillset",
+			href: "/#skillset",
 		},
 		{
 			label: "Projects & History",
-			href: "#proj",
+			href: "/#proj",
 		},
 		{
 			label: "Contact",
-			href: "../public/Resume.tsx",
+			href: "/#contact",
 		},
 		{
 			label: "Resume",
-			href: "#contact",
+			href: "/resume",
 		},
 	],
 	links: {
