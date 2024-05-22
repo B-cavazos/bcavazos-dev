@@ -10,11 +10,8 @@ import {
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 
-import { link as linkStyles } from "@nextui-org/theme";
-
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
-import clsx from "clsx";
 
 //import { ThemeSwitch } from "@/components/theme-switch";
 import { Star, GithubIcon } from "@/components/icons";
@@ -36,7 +33,7 @@ export const Navbar = () => {
 						<Star width={20} height={20} />
 					</NextLink>
 				</NavbarBrand>
-				<ul className="hidden lg:flex gap-6 justify-start ml-2 montserrat-bold text-plum">
+				<ul className="hidden md:flex gap-6 justify-start ml-2 montserrat-bold text-plum">
 					{siteConfig.navItems.map((item) => (
 						<NavbarItem key={item.href}>
 							<NextLink
@@ -78,7 +75,7 @@ export const Navbar = () => {
 					</Button>
 				</NavbarItem>
 			</NavbarContent>
-
+			{/* toggle */}
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
 				<Link
 					isExternal
@@ -91,17 +88,17 @@ export const Navbar = () => {
 				<NavbarMenuToggle />
 			</NavbarContent>
 
-			<NavbarMenu>
-				<div className="mx-4 mt-2 flex flex-col gap-2">
+			<NavbarMenu className=" bg-sand/50 backdrop-blur-xl">
+				<div className="mx-4 mt-2 flex flex-col gap-2 montserrat">
 					{siteConfig.navMenuItems.map((item, index) => (
 						<NavbarMenuItem key={`${item}-${index}`}>
 							<Link
 								color={
 									index === 2
-										? "primary"
+										? "foreground"
 										: index ===
 										  siteConfig.navMenuItems.length - 1
-										? "danger"
+										? "primary"
 										: "foreground"
 								}
 								href="#"
