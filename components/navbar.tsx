@@ -1,3 +1,4 @@
+"use client";
 import {
 	Navbar as NextUINavbar,
 	NavbarContent,
@@ -9,19 +10,21 @@ import {
 } from "@nextui-org/navbar";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
-
 //import { ThemeSwitch } from "@/components/theme-switch";
 import { Star, GithubIcon } from "@/components/icons";
+import { useState } from "react";
 
 export const Navbar = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	return (
 		<NextUINavbar
 			maxWidth="xl"
 			position="sticky"
 			className=" bg-sand/50 backdrop-blur-xl"
+			isMenuOpen={isMenuOpen}
+			onMenuOpenChange={setIsMenuOpen}
 		>
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				{/* brand */}
@@ -72,14 +75,14 @@ export const Navbar = () => {
 						isExternal
 						as={Link}
 						className="text-sm montserrat-bold text-sand bg-lilac tracking-wide" //work on fade
-						href={siteConfig.links.resume} //add resume
+						href={siteConfig.links.resume}
 						variant="flat"
 					>
 						Resume
 					</Button>
 				</NavbarItem>
 			</NavbarContent>
-			{/* mobile github and toggle */}
+			{/* mobile */}
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
 				<Link
 					isExternal
@@ -88,21 +91,39 @@ export const Navbar = () => {
 				>
 					<GithubIcon className="text-default-500 plum" />
 				</Link>
+				<Button
+					isExternal
+					as={Link}
+					className="text-sm montserrat-bold text-sand bg-lilac tracking-wide" //work on fade
+					href={siteConfig.links.resume}
+					variant="flat"
+				>
+					Resume
+				</Button>
 				{/* <ThemeSwitch /> */}
-				<NavbarMenuToggle />
+				{/* <NavbarMenuToggle
+					aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+				/> */}
 			</NavbarContent>
-			{/* mobile links */}
-			<NavbarMenu className=" bg-sand/50 backdrop-blur-xl">
+			{/* mobile links -- undefined err needs to be resolved */}
+			{/* <NavbarMenu className=" bg-sand/50 backdrop-blur-xl">
 				<div className="mx-4 mt-2 flex flex-col gap-2 montserrat">
 					{siteConfig.navMenuItems.map((item, index) => (
 						<NavbarMenuItem key={`${item}-${index}`}>
-							<Link href={item.href} size="lg" color="foreground">
+							<Link
+								href={""}
+								onPress={() => {
+									setIsMenuOpen(false);
+								}}
+								size="lg"
+								color="foreground"
+							>
 								{item.label}
 							</Link>
 						</NavbarMenuItem>
 					))}
 				</div>
-			</NavbarMenu>
+			</NavbarMenu> */}
 		</NextUINavbar>
 	);
 };
