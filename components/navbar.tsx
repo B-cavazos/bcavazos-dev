@@ -55,11 +55,11 @@ export const Navbar = () => {
 			</NavbarContent>
 			{/* left buttons */}
 			<NavbarContent
-				className="hidden sm:flex basis-1/5 sm:basis-full"
+				className="flex basis-1/5 sm:basis-full"
 				justify="end"
 			>
 				{/* Github */}
-				<NavbarItem className="hidden sm:flex gap-2">
+				<NavbarItem className="flex gap-2">
 					<Link
 						isExternal
 						href={siteConfig.links.github}
@@ -70,7 +70,7 @@ export const Navbar = () => {
 					{/* <ThemeSwitch /> */}
 				</NavbarItem>
 				{/* Resume */}
-				<NavbarItem className="hidden md:flex">
+				<NavbarItem className="flex">
 					<Button
 						isExternal
 						as={Link}
@@ -83,7 +83,7 @@ export const Navbar = () => {
 				</NavbarItem>
 			</NavbarContent>
 			{/* mobile */}
-			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+			{/* <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
 				<Link
 					isExternal
 					href={siteConfig.links.github}
@@ -100,11 +100,11 @@ export const Navbar = () => {
 				>
 					Resume
 				</Button>
-				{/* <ThemeSwitch /> */}
-				{/* <NavbarMenuToggle
+				{/* <ThemeSwitch />
+				 <NavbarMenuToggle
 					aria-label={isMenuOpen ? "Close menu" : "Open menu"}
 				/> */}
-			</NavbarContent>
+			{/* </NavbarContent> */}
 			{/* mobile links -- undefined err needs to be resolved */}
 			{/* <NavbarMenu className=" bg-sand/50 backdrop-blur-xl">
 				<div className="mx-4 mt-2 flex flex-col gap-2 montserrat">
