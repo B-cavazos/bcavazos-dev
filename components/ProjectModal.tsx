@@ -1,5 +1,4 @@
-import React, { FC } from "react";
-import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
+import React from "react";
 import {
 	Modal,
 	ModalContent,
@@ -9,39 +8,18 @@ import {
 	Button,
 	useDisclosure,
 } from "@nextui-org/react";
-import { ProjectProps } from "@/types";
 
-const CardComponent: FC<ProjectProps> = ({ project }) => {
+export default function ProjectModal() {
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	console.log("isOpen : ", isOpen);
+
+	const handleOpen = () => {
+		onOpen();
+	};
 	return (
 		<>
-			<Card
-				className="montserrat text-left"
-				isPressable={true}
-				onPress={onOpen}
-			>
-				<CardBody className="overflow-visible p-0">
-					<Image
-						alt={`${project.title} Image`}
-						className="object-cover rounded-t-xl rounded-b-none "
-						src={project.image}
-						width={350}
-						isZoomed
-					/>
-					{/* confirm image sizing */}
-				</CardBody>
-				<CardHeader className="pt-1 px-4 flex-col items-start">
-					<h4 className="font-bold text-large tracking-wide text-plum">
-						{project.title}
-					</h4>
-					<p className="text-tiny text-sky">
-						{project.category.map((category, index) => {
-							return <>{category}&nbsp;&nbsp;&nbsp;</>;
-						})}
-					</p>
-				</CardHeader>
-			</Card>
+			<div className="flex flex-wrap gap-3">
+				<Button onPress={() => handleOpen()}>Open "full"</Button>
+			</div>
 			<Modal size="full" isOpen={isOpen} onClose={onClose}>
 				<ModalContent>
 					{(onClose) => (
@@ -89,6 +67,4 @@ const CardComponent: FC<ProjectProps> = ({ project }) => {
 			</Modal>
 		</>
 	);
-};
-
-export default CardComponent;
+}
