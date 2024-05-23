@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
 import {
 	Modal,
@@ -13,7 +13,7 @@ import { ProjectProps } from "@/types";
 
 const CardComponent: FC<ProjectProps> = ({ project }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	console.log("isOpen : ", isOpen);
+	const screenWidth = window.innerWidth;
 	return (
 		<>
 			<Card
@@ -42,48 +42,42 @@ const CardComponent: FC<ProjectProps> = ({ project }) => {
 					</p>
 				</CardHeader>
 			</Card>
-			<Modal size="full" isOpen={isOpen} onClose={onClose}>
-				<ModalContent>
+			{/* Modal */}
+			<Modal
+				size={screenWidth <= 768 ? "5xl" : "full"}
+				isOpen={isOpen}
+				onClose={onClose}
+				placement="center"
+				isDismissable={false}
+				scrollBehavior="outside"
+				backdrop="blur"
+				classNames={{
+					closeButton: "hover:bg-white/5 active:bg-white/10",
+				}}
+			>
+				<ModalContent className="z-50 bg-[#835e9c]/50 backdrop-blur-md h-fill items-center text-sand ">
 					{(onClose) => (
-						<>
-							<ModalHeader className="flex flex-col gap-1">
-								Modal Title
+						<div className="flex flex-col max-w-7xl">
+							<ModalHeader className="flex flex-col gap-1 font-Kodchasan bold">
+								<h1 className="text-3xl">{project.title}</h1>
+								<h2>{project.subcategory}</h2>
 							</ModalHeader>
-							<ModalBody>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur
-									adipiscing elit. Nullam pulvinar risus non
-									risus hendrerit venenatis. Pellentesque sit
-									amet hendrerit risus, sed porttitor quam.
-								</p>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur
-									adipiscing elit. Nullam pulvinar risus non
-									risus hendrerit venenatis. Pellentesque sit
-									amet hendrerit risus, sed porttitor quam.
-								</p>
-								<p>
-									Magna exercitation reprehenderit magna aute
-									tempor cupidatat consequat elit dolor
-									adipisicing. Mollit dolor eiusmod sunt ex
-									incididunt cillum quis. Velit duis sit
-									officia eiusmod Lorem aliqua enim laboris do
-									dolor eiusmod.
-								</p>
+							<ModalBody className="flex lg:flex-row lg:grid-cols-12 gap-9 justify-items-center align-middle montserrat px-10">
+								<div className="col-span-6">
+									<img
+										src={project.image}
+										alt={`Visual example of ${project.title}`}
+										width={""}
+									/>
+								</div>
+
+								<div className="col-span-2 flex flex-col justify-around">
+									<p>{project.description}</p>
+									<p>Created with: tools and tools</p>
+								</div>
 							</ModalBody>
-							<ModalFooter>
-								<Button
-									color="danger"
-									variant="light"
-									onPress={onClose}
-								>
-									Close
-								</Button>
-								<Button color="primary" onPress={onClose}>
-									Action
-								</Button>
-							</ModalFooter>
-						</>
+							<ModalFooter></ModalFooter>
+						</div>
 					)}
 				</ModalContent>
 			</Modal>

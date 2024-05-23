@@ -61,8 +61,10 @@ export const HomeCopy = {
 		{
 			title: "Bank of Dad",
 			category: ["Development"],
-			image: "../images/bankofdad_large.png",
-			href: "",
+			subcategory: "T-shirt design",
+			image: "../images/uglydoll.png",
+			description:
+				"I was tasked to update a number of existing designs. The copy is the same, but the new design is meant to light-heartedly display the frustration a father may feel when consistently pestered for money by his children.",
 		},
 		{
 			title: "Bank of Dad",
