@@ -52,10 +52,10 @@ export default function Home() {
 				<DividerComponent header={"What Can She Do?"} />
 				<div className="flex flex-col lg:flex-row gap-16 lg:gap-4">
 					<ColorContainer
-						classProp={"w-100 lg:w-1/3"}
+						classProp={"w-100 lg:w-1/2"}
 						ComponentProp={ProjectsComponent}
 					/>
-					<div className="flex flex-col-reverse justify-between lg:ml-12 w-100 lg:w-2/3">
+					<div className="flex flex-col-reverse justify-between lg:ml-12 w-100 lg:w-1/2">
 						<h3 className="text-3xl md:text-6xl lg:text-8xl text-wrap text-end text-lilac uppercase tracking-tight kodchasan-bold mt-4 mb-2 mr-4">
 							Projects
 							<br />& History

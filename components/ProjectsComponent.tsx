@@ -33,7 +33,7 @@ const ProjectsComponent: FC = () => {
 					variant="light"
 					size="sm"
 					className={`lowercase montserrat-bold ${
-						designActive ? "text-sky" : "text-lilac"
+						designActive ? "text-sky" : "text-lilac hover:text-plum"
 					}`}
 					onClick={() => setCategory(["Design"])}
 				>
@@ -45,7 +45,9 @@ const ProjectsComponent: FC = () => {
 					size="sm"
 					onClick={() => setCategory(["Development"])}
 					className={`lowercase montserrat-bold ${
-						developmentActive ? "text-sky" : "text-lilac"
+						developmentActive
+							? "text-sky"
+							: "text-lilac hover:text-plum"
 					}`}
 				>
 					Development
@@ -55,7 +57,7 @@ const ProjectsComponent: FC = () => {
 					variant="light"
 					size="sm"
 					className={`lowercase montserrat-bold ${
-						allActive ? "text-sky" : "text-lilac"
+						allActive ? "text-sky" : "text-lilac hover:text-plum"
 					}`}
 					onClick={() => setCategory(["Design", "Development"])}
 				>

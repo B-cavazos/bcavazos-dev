@@ -82,10 +82,10 @@ export const HomeCopy = {
 	History: [
 		{
 			type: "Work",
-			name: "Bitwise Industries",
+			company: "Bitwise Industries",
+			title: "Software Engineer",
 			start: "2021",
 			end: "2023",
-			title: "Software Engineer",
 			points: [
 				"Point 1 where I did this thing",
 				"I did this other thing that was pretty cool, let me tell you I hope this impresses you",
@@ -94,7 +94,7 @@ export const HomeCopy = {
 		},
 		{
 			type: "Education",
-			institution: "Bitwise Industries",
+			company: "Bitwise Industries",
 			start: "2021",
 			end: "2023",
 			title: "Software Engineer",
@@ -106,7 +106,7 @@ export const HomeCopy = {
 		},
 		{
 			type: "Apprenticeship",
-			institution: "Bitwise Industries",
+			company: "Bitwise Industries",
 			start: "2021",
 			end: "2023",
 			title: "Software Engineer",
