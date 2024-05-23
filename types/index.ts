@@ -22,8 +22,9 @@ export type ColorContainerProps = {
 export interface ProjectItem {
 	title: string;
 	category: string[];
+	subcategory: string;
 	image: string;
-	href: string;
+	description: string;
 }
 
 export interface ProjectProps {
