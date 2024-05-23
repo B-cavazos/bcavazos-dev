@@ -61,9 +61,12 @@ const HistoryComponent: React.FC = () => {
 						<div className="flex items-center justify-between  montserrat text-plum md:mr-6 text-sm md:text-medium">
 							<div className="mr-2">
 								<span className="font-light">
-									{item.title} @
+									{item.type} @
 								</span>
-								<span className="font-bold"> {item.name}</span>
+								<span className="font-bold">
+									{" "}
+									{item.company}
+								</span>
 							</div>
 							<div>
 								<div className="font-bold italic invisible md:visible">

@@ -33,9 +33,9 @@ export interface ProjectProps {
 
 export interface HistoryItem {
 	type: string;
-	name: string;
+	company: string;
+	title: string;
 	start: string;
 	end: string;
-	title: string;
 	points: string[];
 }

@@ -43,7 +43,7 @@ export const Navbar = () => {
 						<NavbarItem key={item.href}>
 							<NextLink
 								className={
-									"data-[active=true]:text-primary data-[active=true]:font-medium"
+									"data-[active=true]:text-primary data-[active=true]:font-medium hover:text-sky"
 								}
 								href={item.href}
 							>
