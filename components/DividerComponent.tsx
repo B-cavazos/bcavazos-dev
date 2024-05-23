@@ -5,7 +5,7 @@ const DividerComponent = ({ header }: { header: string }) => {
 				<h3>{header}</h3>
 			</div>
 			<div className="grow">
-				<hr className="border-sky border-2" />
+				<hr className="border-sky border-2 invisible md:visible" />
 			</div>
 		</div>
 	);

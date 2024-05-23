@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
 import {
 	Modal,
@@ -6,7 +6,6 @@ import {
 	ModalHeader,
 	ModalBody,
 	ModalFooter,
-	Button,
 	useDisclosure,
 } from "@nextui-org/react";
 import { ProjectProps } from "@/types";
@@ -24,7 +23,7 @@ const CardComponent: FC<ProjectProps> = ({ project }) => {
 				<CardBody className="overflow-visible p-0">
 					<Image
 						alt={`${project.title} Image`}
-						className="object-cover rounded-t-xl rounded-b-none "
+						className="object-cover aspect-[4/3]"
 						src={project.image}
 						width={350}
 						isZoomed
