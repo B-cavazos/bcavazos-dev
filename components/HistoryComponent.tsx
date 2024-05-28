@@ -104,7 +104,10 @@ const HistoryComponent: React.FC = () => {
 
 						<ul className="text-16 font-medium leading-4 md:-mt-2 pr-6 md:pr-12 list-image[url(../public/Star.png)]">
 							{item.points.map((point, idx) => (
-								<li className="my-6 md:my-4 " key={idx}>
+								<li
+									className="my-6 md:my-4 leading-relaxed"
+									key={idx}
+								>
 									{point}
 								</li>
 							))}
