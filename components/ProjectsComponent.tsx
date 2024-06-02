@@ -39,7 +39,7 @@ const ProjectsComponent: FC = () => {
 				>
 					Design
 				</Button>
-				<span aria-hidden="true">//</span>
+				<span aria-hidden="true">/</span>
 				<Button
 					variant="light"
 					size="sm"
@@ -52,7 +52,7 @@ const ProjectsComponent: FC = () => {
 				>
 					Development
 				</Button>
-				<span aria-hidden="true">//</span>
+				<span aria-hidden="true">/</span>
 				<Button
 					variant="light"
 					size="sm"
@@ -69,7 +69,7 @@ const ProjectsComponent: FC = () => {
 					if (
 						project.category.some((cat) => category.includes(cat))
 					) {
-						return <CardComponent project={project} />;
+						return <CardComponent project={project} key={index} />;
 					}
 				})}
 			</div>
