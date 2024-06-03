@@ -72,7 +72,6 @@ const CardComponent: FC<ProjectProps> = ({ project }) => {
 									}
 									alt={`Visual example of ${project.title}`}
 									className=" max-w-[400px] md:max-h-[750px] md:max-w-[600px] mx-4 md:mx-0"
-									unoptimized
 								/>
 
 								<div className="flex flex-col self-center mx-10 md:mx-0 h-fill">
