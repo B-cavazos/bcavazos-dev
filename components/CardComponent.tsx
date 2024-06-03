@@ -14,8 +14,8 @@ import { ProjectProps } from "@/types";
 const CardComponent: FC<ProjectProps> = ({ project }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const isBrowser = () => typeof window !== "undefined";
-	const screenWidth = isBrowser() ? window.innerWidth : null;
-	console.log(screenWidth);
+	const screenWidth = isBrowser() ? window.innerWidth : 0;
+	console.log(screenWidth <= 768 ? "small" : "big");
 	return (
 		<>
 			<Card
