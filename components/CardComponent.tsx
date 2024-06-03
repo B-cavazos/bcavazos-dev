@@ -1,3 +1,4 @@
+"use client";
 import React, { FC } from "react";
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
 import {
@@ -12,7 +13,9 @@ import { ProjectProps } from "@/types";
 
 const CardComponent: FC<ProjectProps> = ({ project }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	const screenWidth = window.innerWidth;
+	const isBrowser = () => typeof window !== "undefined";
+	const screenWidth = isBrowser() ? window.innerWidth : null;
+	console.log(screenWidth);
 	return (
 		<>
 			<Card
