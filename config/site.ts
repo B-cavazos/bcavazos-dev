@@ -4,8 +4,9 @@ export type SiteConfig = typeof siteConfig;
 export type HomeCopy = typeof HomeCopy;
 
 export const siteConfig = {
-	name: "Brittney Cavazos Portfolio",
-	description: "A portfolio focusing on web development and graphic design",
+	name: "Brittney Cavazos, Portfolio",
+	description:
+		"An online portfolio focusing on web development and graphic design",
 	navItems: [
 		{
 			label: "About",
@@ -27,19 +28,19 @@ export const siteConfig = {
 	navMenuItems: [
 		{
 			label: "About",
-			href: "/#about",
+			href: `${basePath}/#about`,
 		},
 		{
 			label: "Skillset",
-			href: "/#skillset",
+			href: `${basePath}/#skillset`,
 		},
 		{
 			label: "Projects & History",
-			href: "/#proj",
+			href: `${basePath}/#proj`,
 		},
 		{
 			label: "Contact",
-			href: "/#contact",
+			href: `${basePath}/#contact`,
 		},
 		{
 			label: "Resume",
