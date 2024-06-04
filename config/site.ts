@@ -10,19 +10,19 @@ export const siteConfig = {
 	navItems: [
 		{
 			label: "About",
-			href: "/",
+			href: `${basePath}/#about`,
 		},
 		{
 			label: "Skillset",
-			href: "/#skillset",
+			href: `${basePath}/#skillset`,
 		},
 		{
 			label: "Projects & History",
-			href: "/#proj",
+			href: `${basePath}/#proj`,
 		},
 		{
 			label: "Contact",
-			href: "/#contact",
+			href: `${basePath}/#contact`,
 		},
 	],
 	navMenuItems: [
