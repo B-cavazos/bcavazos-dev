@@ -62,8 +62,8 @@ export const HomeCopy = {
 			title: "Love Unmasked",
 			category: ["Development"],
 			subcategory: ["Mobile App Development"],
-			image_lg: "././../images/loveunmasked_large.png",
-			image_sm: "././../images/loveunmasked_small.png",
+			image_lg: "./../images/loveunmasked_large.png",
+			image_sm: "./../images/loveunmasked_small.png",
 			description:
 				"Love Unmasked is a mobile dating app specifically designed for healthcare professionals, providing a supportive and engaging platform for them to connect and form meaningful relationships. As part of the development team, I contributed to implementing key features that seamlessly integrated the front-end and back-end, including password setup, managing state in the front end when new matches are made, and sending confirmation codes.",
 			technologies: [
