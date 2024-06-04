@@ -1,5 +1,5 @@
 import React from "react";
-import { Star } from "@/components/icons";
+import { GithubIcon, Star } from "@/components/icons";
 import DividerComponent from "@/components/DividerComponent";
 import ColorContainer from "@/components/ColorContainer";
 import AboutBio from "@/components/AboutBio";
@@ -7,6 +7,9 @@ import { Skillsets } from "@/components/Skillsets";
 import ProjectsComponent from "@/components/ProjectsComponent";
 import HistoryComponent from "@/components/HistoryComponent";
 import ContactForm from "@/components/FormComponent";
+import { Button } from "@nextui-org/button";
+import { Link } from "@nextui-org/link";
+import { siteConfig } from "@/config/site";
 
 export default function Home() {
 	return (
@@ -14,7 +17,7 @@ export default function Home() {
 			{/* About */}
 			<section className="flex flex-col lg:flex-row md:col-span-2 sm:p-12 gap-6">
 				{/* Name */}
-				<div className="flex flex-row place-content-center text-center items-center kodchasan-bold pb-12 md:pb-4 lg:pb-12 pr-12">
+				<div className="flex flex-col place-content-center text-center items-center kodchasan-bold pb-12 md:pb-4 lg:pb-12 pr-12">
 					<div className="relative pl-11 sm:pl-0">
 						<div>
 							<h1 className="text-plum text-5xl sm:text-6xl md:text-8xl tracking-wider">
@@ -22,11 +25,31 @@ export default function Home() {
 							</h1>
 							<Star className="absolute top-0 -right-9 sm:-right-8 md:-right-6 lg:-right-11" />
 						</div>
-
 						<br />
 						<p className="text-blue-900 leading-tight -mt-3">
 							Front end, mobile development, logo, & print design
 						</p>
+					</div>
+					<div className="flex w-100 justify-start pt-12 gap-6">
+						<Button
+							isExternal
+							as={Link}
+							className="text-sm montserrat-bold text-plum border-plum hover:bg-plum hover:text-sand tracking-wide"
+							href={siteConfig.links.resume}
+							variant="bordered"
+						>
+							Resume
+						</Button>
+						<Link
+							isExternal
+							href={siteConfig.links.github}
+							aria-label="Github"
+						>
+							<GithubIcon
+								className="text-default-500"
+								size={40}
+							/>
+						</Link>
 					</div>
 				</div>
 				{/* bio */}
