@@ -46,7 +46,7 @@ export const Navbar = () => {
 									"data-[active=true]:text-primary data-[active=true]:font-medium hover:text-sky"
 								}
 								href={item.href}
-								scroll={true}
+								scroll={false}
 								replace={true}
 							>
 								{item.label}
