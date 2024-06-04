@@ -50,6 +50,7 @@ export const siteConfig = {
 	links: {
 		github: "https://github.com/b-cavazos",
 		resume: "./Cavazos_resume_24.pdf",
+		linkedin: "https://www.linkedin.com/in/brittney-cavazos/",
 	},
 };
 

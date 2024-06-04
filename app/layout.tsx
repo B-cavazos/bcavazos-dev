@@ -54,7 +54,7 @@ export default function RootLayout({
 						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow ">
 							{children}
 						</main>
-						<footer className="w-full flex items-center justify-center py-3 bg-sand">
+						<footer className="w-full flex items-center justify-center py-3 bg-sand text-lilac">
 							<p>Currently Under Construction </p>
 							<span>˙˚ʚ(´◡`)ɞ˚˙</span>
 						</footer>

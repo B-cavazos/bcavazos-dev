@@ -15,9 +15,9 @@ export default function Home() {
 	return (
 		<section className="flex flex-col gap-12 lg:gap-40 py-8 md:py-10 justify-center items-center">
 			{/* About */}
-			<section className="flex flex-col lg:flex-row md:col-span-2 sm:p-12 gap-6">
+			<section className="flex flex-col lg:flex-row md:col-span-2 sm:p-12 gap-6 justify-between">
 				{/* Name */}
-				<div className="flex flex-col place-content-center text-center items-center kodchasan-bold pb-12 md:pb-4 lg:pb-12 pr-12">
+				<div className="flex flex-col place-content-center text-center items-center kodchasan-bold pb-12 md:pb-0 md:py-6">
 					<div className="relative pl-11 sm:pl-0">
 						<div>
 							<h1 className="text-plum text-5xl sm:text-6xl md:text-8xl tracking-wider">
@@ -30,7 +30,7 @@ export default function Home() {
 							Front end, mobile development, logo, & print design
 						</p>
 					</div>
-					<div className="flex w-100 justify-start pt-12 gap-6">
+					<div className="flex w-100 mt-12 mb-6 gap-6">
 						<Button
 							isExternal
 							as={Link}
@@ -55,7 +55,7 @@ export default function Home() {
 				{/* bio */}
 				<ColorContainer
 					classProp={
-						"justify-center montserrat leading-relaxed text-plum basis-1/2"
+						"flex flex-col justify-center montserrat leading-relaxed text-plum basis-1/2"
 					}
 					ComponentProp={AboutBio}
 				/>
@@ -90,8 +90,55 @@ export default function Home() {
 			{/* Contact */}
 			<section id="contact" className="flex flex-col w-full gap-3">
 				<DividerComponent header={"Want to Get in Contact?"} />
-				<div className="w-100 md:w-1/2">
-					<ColorContainer ComponentProp={ContactForm} classProp="" />
+				<div className="flex flex-col md:flex-row md:grid-cols-2">
+					<div className="w-100 mb-12 md:mb-0 md:w-1/2">
+						<ColorContainer
+							ComponentProp={ContactForm}
+							classProp=""
+						/>
+					</div>
+					<div className="text-plum montserrat text-xl text-center md:text-left md:px-24">
+						<p className="leading-relaxed">
+							<span className="font-bold">
+								Fill out this form and get in touch with me
+								directly!
+							</span>
+							<br />
+							<br />
+							If you want to see more about my work history, you
+							can checkout my{" "}
+							<Link
+								isExternal
+								href={siteConfig.links.linkedin}
+								aria-label="LinkedIn profile"
+								className="text-xl"
+							>
+								LinkedIn profile
+							</Link>{" "}
+							or see my{" "}
+							<Link
+								isExternal
+								href={siteConfig.links.resume}
+								aria-label="Resume"
+								className="text-xl"
+							>
+								Resume
+							</Link>{" "}
+							.<br /> Lastly,{" "}
+							<Link
+								isExternal
+								href={siteConfig.links.github}
+								aria-label="Github profile"
+								className="text-xl"
+							>
+								Github
+							</Link>{" "}
+							is where to go to take a peek at my coding history
+							<br />
+							<br />
+							Hope to hear from you soon!
+						</p>
+					</div>
 				</div>
 			</section>
 		</section>
