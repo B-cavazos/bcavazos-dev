@@ -11,7 +11,6 @@ import {
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { siteConfig } from "@/config/site";
-import NextLink from "next/link";
 //import { ThemeSwitch } from "@/components/theme-switch";
 import { Star, GithubIcon } from "@/components/icons";
 import { useState } from "react";
@@ -29,28 +28,26 @@ export const Navbar = () => {
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				{/* brand */}
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
-					<NextLink
+					<Link
 						className="flex justify-start items-center gap-1"
 						aria-label="Go to the start of the page"
 						href="/"
 					>
 						<Star width={20} height={20} />
-					</NextLink>
+					</Link>
 				</NavbarBrand>
 				{/* left links */}
 				<ul className="hidden md:flex gap-6 justify-start ml-2 montserrat-bold text-plum">
 					{siteConfig.navItems.map((item) => (
 						<NavbarItem key={item.href}>
-							<NextLink
+							<Link
 								className={
 									"data-[active=true]:text-primary data-[active=true]:font-medium hover:text-sky"
 								}
 								href={item.href}
-								scroll={true}
-								prefetch
 							>
 								{item.label}
-							</NextLink>
+							</Link>
 						</NavbarItem>
 					))}
 				</ul>
