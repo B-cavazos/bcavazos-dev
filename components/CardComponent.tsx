@@ -22,7 +22,7 @@ const CardComponent: FC<ProjectProps> = ({ project }) => {
 				isPressable={true}
 				onPress={onOpen}
 			>
-				<CardBody className="overflow-visible p-0">
+				<CardBody className="overflow-visible p-0 bg-white">
 					<Image
 						alt={`${project.title} Image`}
 						className="object-cover aspect-[4/3] rounded-b-none"

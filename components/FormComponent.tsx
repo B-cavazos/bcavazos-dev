@@ -36,7 +36,12 @@ function ContactForm() {
 				Email Address
 				<br />
 			</label>
-			<input id="email" type="email" name="email" className="h-10 pl-2" />
+			<input
+				id="email"
+				type="email"
+				name="email"
+				className="h-10 pl-2 bg-white"
+			/>
 			<ValidationError
 				prefix="Email"
 				field="email"
