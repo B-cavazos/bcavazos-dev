@@ -89,7 +89,7 @@ const HistoryComponent: React.FC = () => {
 						)
 					}
 					classNames={{
-						base: "bg-gradient-to-b from-lilac2/20 from-10% to-sand to-90% shadow-sm shadow-custom-blue mb-1",
+						base: "bg-sand bg-gradient-to-b from-lilac2/20 from-10% to-sand to-90% shadow-sm shadow-custom-blue mb-1",
 					}} //shadow won't override
 				>
 					<div className="-mt-3 montserrat text-plum">

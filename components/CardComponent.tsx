@@ -32,7 +32,7 @@ const CardComponent: FC<ProjectProps> = ({ project }) => {
 					/>
 					{/* confirm image sizing */}
 				</CardBody>
-				<CardHeader className="pt-1 px-4 flex-col items-start">
+				<CardHeader className="pt-1 px-4 flex-col items-start bg-white">
 					<h4 className="font-bold text-large tracking-wide text-plum">
 						{project.title}
 					</h4>

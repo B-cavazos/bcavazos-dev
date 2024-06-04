@@ -40,7 +40,7 @@ function ContactForm() {
 				id="email"
 				type="email"
 				name="email"
-				className="h-10 pl-2 bg-white"
+				className="h-10 pl-2 bg-white text-black"
 			/>
 			<ValidationError
 				prefix="Email"
@@ -52,7 +52,11 @@ function ContactForm() {
 				Message
 				<br />
 			</label>
-			<textarea id="message" name="message" className="h-40 p-2" />
+			<textarea
+				id="message"
+				name="message"
+				className="h-40 p-2 bg-white text-black"
+			/>
 
 			<ValidationError
 				prefix="Message"
