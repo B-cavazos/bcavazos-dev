@@ -80,8 +80,8 @@ export const HomeCopy = {
 			title: "Bank of Dad",
 			category: ["Design"],
 			subcategory: ["T-shirt Design"],
-			image_lg: `${basePath}/images/bankofdad_large.png/`,
-			image_sm: `${basePath}/images/bankofdad_small.png/`,
+			image_lg: `${basePath}/images/bankofdad_large.png`,
+			image_sm: `${basePath}/images/bankofdad_small.png`,
 			description:
 				"For this project I was tasked to create a T-shirt design. I was given the copy to use . This design is meant to light-heartedly display the frustration a father may feel when he is consistently pestered for money by his children.",
 			technologies: ["Adobe Illustrator"],
