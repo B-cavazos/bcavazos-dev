@@ -10,7 +10,7 @@ const HistoryComponent: React.FC = () => {
 	const itemClasses = {
 		trigger: "px-2 py-0 rounded-lg h-14 flex",
 		indicator: "text-large",
-		content: "px-2",
+		content: "bg-sand px-2",
 	};
 	return (
 		<Accordion
@@ -89,7 +89,7 @@ const HistoryComponent: React.FC = () => {
 						)
 					}
 					classNames={{
-						base: "bg-sand bg-gradient-to-b from-lilac2/20 from-10% to-sand to-90% shadow-sm shadow-custom-blue mb-1",
+						base: "bg-gradient-to-b from-lilac2/20 from-10% to-sand to-90% shadow-sm shadow-custom-blue mb-1",
 					}} //shadow won't override
 				>
 					<div className="-mt-3 montserrat text-plum">

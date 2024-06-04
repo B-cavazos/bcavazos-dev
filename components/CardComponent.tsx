@@ -18,7 +18,7 @@ const CardComponent: FC<ProjectProps> = ({ project }) => {
 	return (
 		<>
 			<Card
-				className="montserrat text-left"
+				className="montserrat text-left bg-white"
 				isPressable={true}
 				onPress={onOpen}
 			>
